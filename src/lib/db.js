@@ -6,8 +6,8 @@ let db = null;
 
 export async function openDb() {
   if (!db) {
-    // Mengakses database yang ada di root folder workspace 'program gajelas'
-    const dbPath = path.resolve(process.cwd(), '../Koperasi_Voucher_2025.db');
+    // Mengakses database yang ada di dalam folder project (web-koperasi)
+    const dbPath = path.join(process.cwd(), 'Koperasi_Voucher_2025.db');
     
     db = await open({
       filename: dbPath,
